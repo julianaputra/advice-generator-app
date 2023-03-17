@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="public/css/style.css">
+
+  <title>Frontend Mentor | Advice generator app</title>
+</head>
+
+<body>
+  <div class="card">
+    <h4 class="card__title">Advice #<span id="adviceId">???</span></h4>
+    <p class="card__content">“<span id="adviceText">Loading Advice...</span>”</p>
+    <picture>
+      <source media="(min-width:1440px)" srcset="public/img/pattern-divider-desktop.svg">
+      <img class="card__divider" src="public/img/pattern-divider-mobile.svg" alt="Divider Pattern">
+    </picture>
+    <button class="button-refresh" id="refreshButton">
+      <img id="diceIcon" class="spin" src="public/img/icon-dice.svg" alt="Dice Icon">
+    </button>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a target="_blank" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+      Mentor</a>.
+    Coded by <a target="_blank" href="https://github.com/julianaputra">Juliana Putra</a>.
+  </div>
+
+  <script src="public/js/script.js"></script>
+</body>
+
+</html>

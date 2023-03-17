@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+
+  --mobile-max-width: 375px;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--dark-blue);
+  color: var(--light-cyan);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  position: relative;
+}
+
+.card {
+  background-color: var(--dark-grayish-blue);
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  padding: 48px 48px 72px 48px;
+  position: relative;
+}
+
+.card__title {
+  font-size: 13px;
+  color: var(--neon-green);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  letter-spacing: 0.32em;
+}
+
+.card__content {
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.card__divider {
+  width: 100%;
+}
+
+.button-refresh {
+  /* reset */
+  border: none;
+  background-color: var(--neon-green);
+
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+
+  transition: box-shadow 0.3s ease;
+}
+
+.button-refresh:hover {
+  box-shadow: 0px 0px 50px #52ffa8;
+  cursor: pointer;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 11px;
+  text-align: center;
+  transform: translateX(-50%);
+  padding: 8px;
+}
+
+.attribution a {
+  color: var(--neon-green);
+}
+
+.spin {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 375.99px) {
+  body {
+    justify-content: flex-start;
+    padding-top: 120px;
+    padding-bottom: 215px;
+  }
+
+  .card {
+    padding: 40px 24px 64px 24px;
+    border-radius: 9px;
+  }
+
+  .card__title {
+    font-size: 11px;
+  }
+
+  .card__content {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
